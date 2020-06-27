@@ -1,0 +1,33 @@
+{%load static%}
+<section class="widget post-right-item"><h4 class="post-right-title">技能提升推荐</h4>
+    <ul class="post-new">
+        {%for k in remen%}
+            <li>
+                <div class="text">
+                    <a href="{%url 'index'%}show-{{k.id}}.html" title="{{k.title}}" target="_blank">{{k.title}}</a>
+                </div>
+            </li>
+        {%endfor%}
+    </ul>
+</section>
+<section class="widget post-right-item"><h4 class="post-right-title">文章类别</h4>
+    <div class="tags">
+        {%for tag in tags%}
+            <a href="{%url 'index'%}tag/{{tag.name}}">{{tag.name}}</a>
+        {%endfor%}
+
+    </div>
+</section>
+<!-- /关注我们 -->
+<div class="post-right-item">
+    <h4 class="post-right-title">关注我们</h4>
+    <div class="wid-about">
+        <p>Python训练基地，欢迎关注！</p>
+        <img src="{% url 'index' %}static/picture/weixinerwenma.jpg" alt="微信二维码" width="160" height="160">
+    </div>
+    <div class="wid-about">
+        <p><strong>联系方式:</strong></p>
+        <p>QQ:306262361</p>
+        <p>Email：jine11@126.com</p>
+    </div>
+</div>
